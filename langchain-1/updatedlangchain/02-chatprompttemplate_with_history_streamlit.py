@@ -15,7 +15,7 @@ llm = init_chat_model("google_genai:gemini-2.5-flash")
 prompt_template = ChatPromptTemplate.from_messages(
     [
         ("system", "You are an Agile Coach. Answer any questions about Agile processes."),
-        MessagesPlaceholder(variable_name="chat_hitory"),
+        MessagesPlaceholder(variable_name="chat_history"),
         ("human", "{input}")
     ]
 )
