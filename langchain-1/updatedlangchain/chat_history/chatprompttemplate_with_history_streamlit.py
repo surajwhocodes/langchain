@@ -41,3 +41,6 @@ chain_with_history = RunnableWithMessageHistory(
 if input:
     response = chain_with_history.invoke({"input": input},{"configurable":{"session_id":"abc123"}})
     st.write(response.content)
+
+st.write("HISTORY")
+st.write(history_for_chain)
